@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/MHU-logo.png" type="image/png">
+  <title>MHU Portal</title>
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/select2.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+
+  <!--Custom fonts-->
+  <link rel="stylesheet" href="assets/assets/fonts/polaris.otf">
+  <link rel="stylesheet" href="assets/assets/fonts/polarisbold.otf">
+  <link rel="stylesheet" href="assets/assets/fonts/SpaceMono-Regular.ttf">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/logged-in-styles.css">
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/vendor/select2/select2.min.js"></script>
+  <script src="js/vendor/dropzone/dropzone.min.js"></script>
+  <script src="js/vendor/handlebars/handlebars.runtime.min-v4.7.7.js"></script>
+  <script src="js/vendor/sweetalert2/sweetalert2.min.js"></script>
+  <script src="js/vendor/toastr/toastr.min.js"></script>
+  <script src="js/vendor/intlTelInput/intlTelInput.min.js"></script>
+  <script src="js/vendor/jquery-mask-plugin/jquery.mask.min.js"></script>
+
+  <style>
+    @media (max-width: 576px) { /* Mobile */
+      .card-box {
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 15px; /* Add the desired padding value */
+      }
+    }
+  
+  @media (min-width: 576px) and (max-width: 768px) { /* Tablette */
+      .card-box {
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+  }
+  
+  @media (min-width: 768px) { /* Desktop */
+      .card-box {
+          margin-left: 30px;
+          margin-right: 30px;
+      }
+  }
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="full-header">
+      <div class="logo-wrapper">
+        <a href="/">
+          <img src="images/MHU-logo.png" alt="MHU Logo">
+        </a>
+      </div>
+      <div class="logo-text">
+        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
+        <br>
+        <span>Turks and Caicos Islands Government</span>
+      </div>
+      <div class="text-right" style="margin-left: auto; margin-right: 30px">
+        <span style="color: white; font-size: 14px">
+          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
+          <i class="fa fa-envelope mr-1 ml-2"></i>migranthealth@gov.tc
+        </span>
+      </div>
+    </div>
+    <div id="small-header">
+      <div class="logo-wrapper">
+        <a href="/">
+          <img src="images/MHU-logo.png" alt="MHU Logo">
+        </a>
+      </div>
+      <div class="logo-text">
+        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
+        <br>
+        <span>Turks and Caicos Islands Government</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-10 col-sm-12">
+      <div class="card-box mx-xs-1 mx-sm-2 mx-md-4 mx-lg-5 p-md-5 p-xs-1 shadow-lg border border-dark rounded my-3">
+        <div class="row">
+          <style>
+            .card-box {
+              font-family: 'Polaris', sans-serif; /* Appliquer la police Polaris */
+              font-size: 17px; /* Appliquer la taille de police de 17px */
+            }
+          
+            .card-box input
+             {
+              font-family: 'Polaris';
+              font-size: 17px;
+              color: gray;
+            }
+          </style>
+            <div class="col-md-9 pl-4">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="/verify"><i class="fa fa-chevron-right"></i><b>Verify a certificate</b></a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <i class="fa fa-chevron-right"></i><b>Certificate details</b>
+                  </li>
+                </ol>
+              </nav>
+          
+              <div class="row">
+                <div class="col-12">
+                  <h1 style="font-size: 30px; font-family: Polarisbold;"><b>Certificate holder details</b></h1>
+                </div>
+              </div>
+              <hr>
+              <div class="alert alert-success">
+                Valid certificate
+              </div>
+          
+              <!-- Read-only Form -->
+              <form id="certificateDetailsForm" class="p-3">
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="certificateNumberControl" style="font-family: Polaris; font-size: 17px;"><b>Certificate number</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="text" name="certificateNumber" id="certificateNumberControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="fullNameControl" style="font-family: Polaris; font-size: 17px;"><b>Full name</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="text" name="fullName" id="fullNameControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="dateOfBirthControl" style="font-family: Polaris; font-size: 17px;"><b>Date of birth</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="date" name="dateOfBirth" id="dateOfBirthControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                    <span id="dateOfBirthValue" class="font-13" style="color:rgb(179, 175, 175); font-family: Polaris; font-size: 17px;">Selected date:</span>
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="countryNameControl" style="font-family: Polaris; font-size: 17px;"><b>Country</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="text" name="countryName" id="countryNameControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="examiningPhysicianControl" style="font-family: Polaris; font-size: 17px;"><b>Examining Physician</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="text" name="examiningPhysician" id="examiningPhysicianControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="dateIssuedControl" style="font-family: Polaris; font-size: 17px;"><b>Date issued</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="date" name="dateIssued" id="dateIssuedControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                    <span id="dateIssuedValue" class="font-13" style="color:rgb(179, 175, 175); font-family: Polaris; font-size: 17px;">Selected date:</span>
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="expiryDateControl" style="font-family: Polaris; font-size: 17px;"><b>Expiry date</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="date" name="expiryDate" id="expiryDateControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                    <span id="expiryDateValue" class="font-13" style="color:rgb(179, 175, 175); font-family: Polaris; font-size: 17px;">Selected date:</span>
+                  </div>
+                </div>
+              
+                <div class="row pb-3">
+                  <div class="col-4 col-md-5">
+                    <label class="mb-2" for="medicalOfficerControl" style="font-family: Polaris; font-size: 17px;"><b>Verified by TCIG Medical Officer</b></label>
+                  </div>
+                  <div class="col-8 col-md-7">
+                    <input type="text" name="medicalOfficer" id="medicalOfficerControl" class="form-control" disabled style="font-family: Polaris; font-size: 17px;">
+                  </div>
+                </div>
+              </form>
+              
+            </div>
+          <div class="col-md-3 mt-xs-2 mt-2 mt-md-0">
+            <div class="row">
+              <img src="images/logo_mohhs.png" alt="Ministry of Health and Human Services Logo" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-3 mt-lg-1 mt-md-1 flex-md-row">
+      <div class="col-lg-10 col-md-8 col-xs-12">
+        <span style="font-size: 11px">
+          © Official Portal of Government of the Turks and Caicos Islands Information and Services.
+        </span>
+      </div>
+      <div class="mobile-footer mt-sm-2" style="width: 40%; padding-left: 10px; margin-top: 10px">
+        <span style="color: white; font-size: 11px">
+          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
+          <br>
+          <i class="fa fa-envelope mr-1"></i>migranthealth@gov.tc
+        </span>
+      </div>
+      <div class="col-lg-2 col-md-2 col-xs-3 unselectable mt-md-0 mt-2">
+        <a href="#" target="_blank"><span class="fab fa-facebook-f mr-md-2 mr-1 fa-sm social-icon"></span></a>
+        <a href="#" target="_blank"><span class="fab fa-twitter mr-md-2 mr-1 fa-sm social-icon"></span></a>
+        <a href="#" target="_blank"><span class="fab fa-instagram mr-md-2 mr-1 fa-sm social-icon"></span></a>
+        <a href="#" target="_blank"><span class="fa fa-home fa-sm social-icon"></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Helper function to convert ISO date string to "YYYY-MM-DD" format
+    function toDateInputFormat(dateString) {
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) {
+        return "";
+      }
+      const year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+      if (month < 10) month = "0" + month;
+      if (day < 10) day = "0" + day;
+      return `${year}-${month}-${day}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Retrieve URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const certificateNumber = urlParams.get("numero_certificat");
+      //const nom = urlParams.get("nom");
+      //const prenom = urlParams.get("prenom");
+      const fullname = urlParams.get("nom_complet");
+      const dateOfBirth = urlParams.get("date_naissance");
+      const countryName = urlParams.get("institution");
+      const examiningPhysician = urlParams.get("verificateur_nom");
+      const dateIssued = urlParams.get("date_emission");
+      const expiryDate = urlParams.get("date_expiration");
+      const medicalOfficer = urlParams.get("verificateur_fonction");
+
+      // Set input values using the helper to convert to "YYYY-MM-DD" format for date fields
+      if (certificateNumber) {
+        document.getElementById("certificateNumberControl").value = certificateNumber;
+      }
+      /* if (nom && prenom) {
+        document.getElementById("fullNameControl").value = `${nom} ${prenom}`;
+      } */
+      if (fullname) {
+        document.getElementById("fullNameControl").value = fullname;
+      }
+      if (dateOfBirth) {
+        document.getElementById("dateOfBirthControl").value = toDateInputFormat(dateOfBirth);
+      }
+      if (countryName) {
+        document.getElementById("countryNameControl").value = countryName;
+      }
+      if (examiningPhysician) {
+        document.getElementById("examiningPhysicianControl").value = examiningPhysician;
+      }
+      if (dateIssued) {
+        document.getElementById("dateIssuedControl").value = toDateInputFormat(dateIssued);
+      }
+      if (expiryDate) {
+        document.getElementById("expiryDateControl").value = toDateInputFormat(expiryDate);
+      }
+      if (medicalOfficer) {
+        document.getElementById("medicalOfficerControl").value = medicalOfficer;
+      }
+    });
+
+    $(document).ready(function () {
+      // Define date fields and their associated display spans
+      const dateFields = {
+        dateOfBirth: {
+          input: $('#dateOfBirthControl'),
+          span: $('#dateOfBirthValue')
+        },
+        dateIssued: {
+          input: $('#dateIssuedControl'),
+          span: $('#dateIssuedValue')
+        },
+        expiryDate: {
+          input: $('#expiryDateControl'),
+          span: $('#expiryDateValue')
+        }
+      };
+
+      // Function to format and display the date in a human-readable format
+      function processDate(input, span) {
+        const value = input.val();
+        if (value) {
+          const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+          if (datePattern.test(value)) {
+            const [year, month, day] = value.split('-').map(num => parseInt(num, 10));
+            const date = new Date(year, month - 1, day);
+            if (!isNaN(date.getTime())) {
+              const formattedDate = new Intl.DateTimeFormat(undefined, {
+                dateStyle: 'long'
+              }).format(date);
+              span.text(`Selected date: ${formattedDate}`);
+            } else {
+              span.text('Invalid date');
+            }
+          } else {
+            span.text('Invalid date format');
+          }
+        } else {
+          span.text('Please select a value');
+        }
+      }
+
+      // Process each date field initially and on change
+      Object.values(dateFields).forEach(({ input, span }) => {
+        processDate(input, span);
+        input.on('change', function () {
+          processDate(input, span);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
