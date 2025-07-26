@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify Certificate - GVTC HealthChecker</title>
+  <link rel="icon" href="images/MHU-logo.png" type="image/png">
+  
+  <!-- CDN Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
+
+  <style>
+    body { background-color: #f4f6f9; }
+    .custom-container { max-width: 600px; margin-top: 80px; }
+    .logo { max-width: 100px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container custom-container text-center">
+    <img src="images/MHU-logo.png" class="logo" alt="Logo">
+    <h2>Certificate Verification</h2>
+    <p class="text-muted">Enter your certificate number and access code</p>
+
+    <form id="verify-form" class="mt-4">
+      <div class="form-group text-left">
+        <label for="certificateNumber"><b>Certificate Number</b></label>
+        <input type="text" class="form-control" id="certificateNumber" required>
+      </div>
+      <div class="form-group text-left">
+        <label for="accessCode"><b>Access Code</b></label>
+        <input type="text" class="form-control" id="accessCode" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3">
+        <i class="fa fa-search mr-1"></i> Verify
+      </button>
+    </form>
+  </div>
+
+  <!-- JS Libs -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    document.getElementById("verify-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const certificateNumber = document.getElementById("certificateNumber").value.trim();
+      const accessCode = document.getElementById("accessCode").value.trim();
+
+      if (!certificateNumber || !accessCode) {
+        Swal.fire("Error", "Please fill in all fields", "error");
+        return;
+      }
+
+      try {
+        const response = await fetch("/api/details", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ certificateNumber, accessCode })
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          Swal.fire({
+            icon: "success",
+            title: "Certificate Validated",
+            html: `
+              <b>Number:</b> ${result.certificate.certificateNumber}<br>
+              <b>Name:</b> ${result.certificate.name}<br>
+              <b>Status:</b> ${result.certificate.status}
+            `
+          });
+        } else {
+          Swal.fire("Not Found", result.message || "Certificate not found", "error");
+        }
+
+      } catch (error) {
+        console.error("API error:", error);
+        Swal.fire("Server Error", "Unable to verify certificate. Try again later.", "error");
+      }
+    });
+  </script>
+</body>
+</html>
