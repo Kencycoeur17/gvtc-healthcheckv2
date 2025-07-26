@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: govtc-healthcheck-v2
+    env: static
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false
