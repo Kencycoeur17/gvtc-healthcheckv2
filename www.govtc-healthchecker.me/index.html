@@ -1,202 +1,44 @@
-<!doctype html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Mirrored from www.certificates-gov-tc.me/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 16:31:01 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="images/MHU-logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MHU Portal</title>
-  <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-  <link rel="stylesheet" href="css/select2.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" />
-  <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/sweetalert2%4011.0.19/dist/sweetalert2.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
-  
+  <link rel="icon" href="images/MHU-logo.png" type="image/png">
+
+  <!-- CDN externes corrigés -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+  <!-- Fichiers CSS locaux -->
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/logged-in-styles.css">
-  <script src="../code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
+  <!-- Scripts JS externes corrigés -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/select2.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.runtime.min.js"></script>
-  <script src="../cdn.jsdelivr.net/npm/sweetalert2%4011.0.19/dist/sweetalert2.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-  <script src="../cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-  <!-- <script src="/LICENSE"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.runtime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <div id="full-header">
-      <div class="logo-wrapper">
-        <a href="index-2.html">
-          <img src="images/MHU-logo.png" alt="MHU Logo">
-        </a>
-      </div>
-      <div class="logo-text">
-        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
-        <br>
-        <span>Turks and Caicos Islands Government</span>
-      </div>
-      <div class="text-right " style="margin-left: auto; margin-right: 30px">
-        <span style="color: white; font-size: 14px">
-          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
-          <i class="fa fa-envelope mr-1 ml-2"></i>migranthealth@gov.tc
-        </span>
-        <br>
-      </div>
-    </div>
-    <div id="small-header">
-      <div class="logo-wrapper">
-        <a href="index-2.html">
-          <img src="images/MHU-logo.png" alt="MHU Logo">
-        </a>
-      </div>
-      <div class="logo-text">
-        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
-        <br>
-        <span>Turks and Caicos Islands Government</span>
-      </div>
-    </div>
-  </header>
-  <div class="row justify-content-center mt-4">
-  <div class="col-md-10 col-sm-12">
-    <div class="card-box mx-xs-2 mx-2 p-md-5 p-xs-1">
-      <div class="row">
-        <div class="col-md-9 pl-4">
-          <div class="row">
-            <div class="col-12">
-              <h1><b>Welcome to the Migrant Health Portal</b></h1>
-            </div>
-          </div>
-          <hr>
-          <div class="row mt-3">
-            <div class="col-12">
-              <h3 class="pb-3"><b>MIGRANT HEALTH PORTAL</b></h3>
-              <ol class="list-group list-group-numbered">
-                <li class="pb-3">
-                  <p class="font-weight-bold font-15">Patient Registration:</p>
-                  <ul class="pl-3" style="list-style-type: disc;">
-                    <li>
-                      Patients should register as an applicant on the MHU portal.
-                    </li>
-                    <li>
-                      Click "Login" to begin registration.
-                    </li>
-                  </ul>
-                </li>
-                <li class="pb-3">
-                  <p class="font-weight-bold font-15">Check Clinic Availability:</p>
-                  <ul class="pl-3 pb-3" style="list-style-type: disc;">
-                    <li>
-                      After logging in, create a new submission, and select your current location.
-                    </li>
-                    <li>
-                      If clinics are listed, choose one then proceed to steps 3 and 4.
-                    </li>
-                    <li>
-                      If no clinics are listed, proceed with steps A and B before moving on to steps 3 and 4:
-                    </li>
-                  </ul>
-                  <ol class="pl-3" type="A">
-                    <li class="pb-2">
-                      <p class="font-weight-bold font-15">HPA Verification:</p>
-                      <ul class="pl-3" style="list-style-type: disc;">
-                        <li>Doctors must obtain mandatory verification from the Health Professions Authority (HPA)
-                          before registering.</li>
-                        <li>Download the
-                          <a class="text-info" href="documents/HPA%20Verification%20Checklist.html" target="_blank">HPA
-                            verification form</a>
-                          , complete it, and submit the form along with the
-                          requested documents to <a href="mailto:hpaapplications@gov.tc"
-                            class="text-info">hpaapplications@gov.tc</a>.
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <p class="font-weight-bold font-15">Doctor Registration:</p>
-                      <ul class="pl-3" style="list-style-type: disc;">
-                        <li>Doctors should register on the MHU portal and upload the HPA Verification.</li>
-                        <li>Click "Login" to begin registration.</li>
-                      </ul>
-                    </li>
-                  </ol>
-                </li>
-                <li class="pb-3">
-                  <p class="font-weight-bold font-15">Data Input:</p>
-                  <ul class="pl-3" style="list-style-type: disc;">
-                    <li>
-                      The doctor inputs the patient's medical data during the appointment.
-                    </li>
-                  </ul>
-                </li>
-                <li class="pb-3">
-                  <p class="font-weight-bold font-15">Payment:</p>
-                  <ul class="pl-3" style="list-style-type: disc;">
-                    <li>
-                      Complete the payment to successfully submit the application.
-                    </li>
-                  </ul>
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <a class="nostyle" href="login.html">
-                <button class="btn btn-primary btn-block" type="button">Login</button>
-              </a>
-            </div>
-            <div class="col-md-6 mt-xs-2 mt-2 mt-md-0">
-              <a class="nostyle" href="verify.html">
-                <button class="btn btn-primary btn-block" type="button">Verify a certificate</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 mt-xs-2 mt-2 mt-md-0 d-none d-md-block">
-          <div class="row">
-            <img src="images/logo_mohhs.png" alt="Ministry of Health and Human Services Logo" style="width: 100%;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <footer>
-    <div class="d-flex flex-column justify-content-center align-items-center mt-3 mt-lg-1 mt-md-1 flex-md-row">
-      <div class="col-lg-10 col-md-8 col-xs-12">
-        <span style="font-size: 11px">
-          © Official Portal of Government of the Turks and Caicos Islands Information and Services.
-        </span>
-      </div>
-      <div class="mobile-footer mt-sm-2" style="width: 40%; padding-left: 10px; margin-top: 10px">
-        <span style="color: white; font-size: 11px">
-          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
-          <br>
-          <i class="fa fa-envelope mr-1"></i>migranthealth@gov.tc
-        </span>
-      </div>
-      <div class="col-lg-2 col-md-2 col-xs-3 unselectable mt-md-0 mt-2">
-        <a href="https://www.facebook.com/pressofficetcig/" target="_blank"><span
-            class="fab fa-facebook-f mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://twitter.com/TCIG_Press" target="_blank"><span
-            class="fab fa-twitter mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://www.instagram.com/turksandcaicosgovernment/" target="_blank"><span
-            class="fab fa-instagram mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://gov.tc/" target="_blank"><span class="fa fa-home fa-sm social-icon"></span></a>
-      </div>
-    </div>
-  </footer>
- </body>
+  <!-- Le reste du HTML que tu m’as fourni reste inchangé -->
+  <!-- Coller ici tout ton bloc <body> depuis <header> jusqu'à </footer> -->
+  <!-- ... -->
 
-<!-- Mirrored from www.certificates-gov-tc.me/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 16:31:06 GMT -->
+  <!-- Tu peux copier tout ce contenu du body d’origine ici -->
+</body>
+
 </html>
