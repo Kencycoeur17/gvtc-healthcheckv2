@@ -1,286 +1,87 @@
-<!doctype html>
-<html lang="en-us">
-
-<!-- Mirrored from healthcertificate.gov.tc/certificates/validate by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Mar 2025 04:40:08 GMT -->
-<!-- Added by HTTrack -->
-<!-- Mirrored from www.certificates-gov-tc.me/verify by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 16:30:29 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify Certificate - GVTC HealthChecker</title>
   <link rel="icon" href="images/MHU-logo.png" type="image/png">
-  <title>MHU Portal</title>
-  <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <!-- CDN Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"/>
 
-  <link rel="stylesheet" href="css/select2.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" />
-  <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/sweetalert2%4011.0.19/dist/sweetalert2.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
-
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/logged-in-styles.css">  
-  <link rel="stylesheet" href="css/logged-in-styles.css">
-  <script src="../code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script src="js/vendor/select2/select2.min.js"></script>
-  <script src="js/vendor/dropzone/dropzone.min.js"></script>
-  <script src="js/vendor/handlebars/handlebars.runtime.min-v4.7.7.js"></script>
-  <script src="js/vendor/sweetalert2/sweetalert2.min.js"></script>
-  <script src="js/vendor/toastr/toastr.min.js"></script>
-  <script src="js/vendor/intlTelInput/intlTelInput.min.js"></script>
-  <script src="js/vendor/jquery-mask-plugin/jquery.mask.min.js"></script>
   <style>
-    .custom-alert {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 15px;
-      background-color: #ff4444;
-      color: white;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .custom-alert button {
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-left: 10px;
-    }
+    body { background-color: #f4f6f9; }
+    .custom-container { max-width: 600px; margin-top: 80px; }
+    .logo { max-width: 100px; margin-bottom: 20px; }
   </style>
 </head>
-
 <body>
-  <header>
-    <div id="full-header">
-      <div class="logo-wrapper">
-        <a href="index.html">
-          <img src="images/MHU-logo.png" alt="MHU Logo">
-        </a>
-      </div>
-      <div class="logo-text">
-        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
-        <br>
-        <span>Turks and Caicos Islands Government</span>
-      </div>
-      <div class="text-right " style="margin-left: auto; margin-right: 30px">
-        <span style="color: white; font-size: 14px">
-          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
-          <i class="fa fa-envelope mr-1 ml-2"></i>migranthealth@gov.tc
-        </span>
-        <br>
-      </div>
-    </div>
-    <div id="small-header">
-      <div class="logo-wrapper">
-        <a href="index.html">
-          <img src="images/MHU-logo.png" alt="MHU Logo">
-        </a>
-      </div>
-      <div class="logo-text">
-        <span>Ministry of Health, Agriculture, Sport and Human Services</span>
-        <br>
-        <span>Turks and Caicos Islands Government</span>
-      </div>
-    </div>
-  </header>
-  <div class="row justify-content-center mt-4">
-    <div class="col-md-10 col-sm-12">
-      <div class="card-box mx-xs-2 mx-2 p-md-5 p-xs-1">
-        <div class="row">
-          <div class="col-md-9 pl-4">
+  <div class="container custom-container text-center">
+    <img src="images/MHU-logo.png" class="logo" alt="Logo">
+    <h2>Certificate Verification</h2>
+    <p class="text-muted">Enter your certificate number and access code</p>
 
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
-                <li class="breadcrumb-item"><a href="verify.html"><i class="fa fa-chevron-right"></i>Verify a certificate</a></li>
-              </ol>
-            </nav>
-            <div class="row">
-              <div class="col-12">
-                <h1><b>Certificate Validation</b></h1>
-              </div>
-            </div>
-            <hr>
-            <p class="text-cyan mb-5">Please fill in the details below to create your account.</p>
-            <form action="https://www.certificates-gov-tc.me/verify" method="POST">
-              <div class="row">
-                <div class="col-4 col-md-5">
-                  <div class="form-group mb-2">
-                    <label class="mb-2" for="certificateNumberControl"><b>Certificate number*</b></label>
-                  </div>
-                </div>
-                <div class="col-8 col-md-7">
-                  <div class="form-group mb-2">
-                    <input type="text" name="certificateNumber" id="certificateNumberControl" class="form-control" value="" required>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4 col-md-5">
-                  <div class="form-group mb-2">
-                    <label class="mb-2" for="accessCodeControl"><b>Access code*</b></label>
-                  </div>
-                </div>
-                <div class="col-8 col-md-7">
-                  <div class="form-group mb-2">
-                    <input type="text" name="accessCode" id="accessCodeControl" class="form-control" value="" required>
-                  </div>
-                </div>
-              </div>
-              <p class="text-danger text-right"></p>
-              <hr>
-              <div class="row justify-content-center">
-                <div class="col-12">
-                  <div class="row justify-content-between">
-                    <div class="col-6">
-                      <div class="row">
-                        <a href="index.html" class="nostyle">
-                          <button type="button" class="btn btn-secondary width-lg ml-2">
-                            <i class="fa fa-arrow-left mr-2 fa-lg"></i>
-                            Back
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-6 ">
-                      <div class="row justify-content-end">
-                        <button id="submit-button" type="submit" class="btn btn-primary width-lg mr-2">
-                          Submit
-                          <i class="fa fa-paper-plane ml-2"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div id="customAlert" class="custom-alert" style="display: none;">
-            <span id="alertMessage"></span>
-            <button onclick="hideAlert()">Fermer</button>
-          </div>
-          <div class="col-md-3 mt-xs-2 mt-2 mt-md-0 d-md-block d-none">
-            <div class="row">
-              <img src="images/logo_mohhs.png" alt="Ministry of Health and Human Services Logo" style="width: 100%;">
-            </div>
-          </div>
-        </div>
+    <form id="verify-form" class="mt-4">
+      <div class="form-group text-left">
+        <label for="certificateNumber"><b>Certificate Number</b></label>
+        <input type="text" class="form-control" id="certificateNumber" required>
       </div>
-    </div>
+      <div class="form-group text-left">
+        <label for="accessCode"><b>Access Code</b></label>
+        <input type="text" class="form-control" id="accessCode" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3">
+        <i class="fa fa-search mr-1"></i> Verify
+      </button>
+    </form>
   </div>
 
-  <footer>
-    <div class="d-flex flex-column justify-content-center align-items-center mt-3 mt-lg-1 mt-md-1 flex-md-row">
-      <div class="col-lg-10 col-md-8 col-xs-12">
-        <span style="font-size: 11px">
-          © Official Portal of Government of the Turks and Caicos Islands Information and Services.
-        </span>
-      </div>
-      <div class="mobile-footer mt-sm-2" style="width: 40%; padding-left: 10px; margin-top: 10px">
-        <span style="color: white; font-size: 11px">
-          <i class="fa fa-phone fa-flip-horizontal mr-1"></i>(649) 338-5063
-          <br>
-          <i class="fa fa-envelope mr-1"></i>migranthealth@gov.tc
-        </span>
-      </div>
-      <div class="col-lg-2 col-md-2 col-xs-3 unselectable mt-md-0 mt-2">
-        <a href="https://www.facebook.com/pressofficetcig/" target="_blank"><span
-            class="fab fa-facebook-f mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://twitter.com/TCIG_Press" target="_blank"><span
-            class="fab fa-twitter mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://www.instagram.com/turksandcaicosgovernment/" target="_blank"><span
-            class="fab fa-instagram mr-md-2 mr-1 fa-sm social-icon"></span></a>
-        <a href="https://gov.tc/" target="_blank"><span class="fa fa-home fa-sm social-icon"></span></a>
-      </div>
-    </div>
-  </footer>
+  <!-- JS Libs -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- Script pour auto-remplir les champs -->
   <script>
+    document.getElementById("verify-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    function showAlert(message, type = "error") {
-      const alertDiv = document.getElementById("customAlert");
-      const alertMessage = document.getElementById("alertMessage");
-    
-      // Définir le message et le style en fonction du type
-      alertMessage.textContent = message;
-      alertDiv.style.backgroundColor = type === "error" ? "#ff4444" : "#4CAF50"; // Rouge pour erreur, vert pour succès
-      alertDiv.style.display = "flex";
-    }
-    
-    function hideAlert() {
-      const alertDiv = document.getElementById("customAlert");
-      alertDiv.style.display = "none";
-    }
+      const certificateNumber = document.getElementById("certificateNumber").value.trim();
+      const accessCode = document.getElementById("accessCode").value.trim();
 
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Extraire les paramètres de l'URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const certificateNum = urlParams.get("certificateNumber"); // Paramètre "num" pour le numéro de certificat
-      
-
-      // Auto-remplir les champs si les paramètres sont présents
-      if (certificateNum) {
-        document.getElementById("certificateNumberControl").value = certificateNum;
+      if (!certificateNumber || !accessCode) {
+        Swal.fire("Error", "Please fill in all fields", "error");
+        return;
       }
-     
-    });
-    
-  document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche l'envoi traditionnel du formulaire
+      try {
+        const response = await fetch("/api/details", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ certificateNumber, accessCode })
+        });
 
-    const certificateNumber = document.getElementById("certificateNumberControl").value;
-    const accessCode = document.getElementById("accessCodeControl").value;
+        const result = await response.json();
 
-    // Vérification si les champs sont remplis
-    if (!certificateNumber || !accessCode) {
-      showAlert("Veuillez remplir tous les champs", "error");
-      return;
-    }
+        if (response.ok && result.success) {
+          Swal.fire({
+            icon: "success",
+            title: "Certificate Validated",
+            html: `
+              <b>Number:</b> ${result.certificate.certificateNumber}<br>
+              <b>Name:</b> ${result.certificate.name}<br>
+              <b>Status:</b> ${result.certificate.status}
+            `
+          });
+        } else {
+          Swal.fire("Not Found", result.message || "Certificate not found", "error");
+        }
 
-    // Envoi des données au serveur via AJAX (fetch API)
-    fetch("/api/details", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ certificateNumber, accessCode })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        // Redirection vers la page /détails avec les informations en URL
-        const queryParams = new URLSearchParams(data.certificate).toString();
-        window.location.href = `/details?${queryParams}`;
-      } else {
-        showAlert(data.message || "Certificat non trouvé", "error");
+      } catch (error) {
+        console.error("API error:", error);
+        Swal.fire("Server Error", "Unable to verify certificate. Try again later.", "error");
       }
-    })
-    .catch(error => {
-      console.error("Erreur lors de la récupération :", error);
-      showAlert("Une erreur s'est produite, veuillez réessayer", "error");
     });
-  });
-});
-
-</script>
+  </script>
 </body>
-
-<!-- Mirrored from www.certificates-gov-tc.me/verify by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 16:30:55 GMT -->
 </html>
